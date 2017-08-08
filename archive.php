@@ -2,7 +2,7 @@
 
 <header role="banner">
 	<a id="logo" href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/logo.png"></a>
-	
+
 	<div id="search">
 		<?php get_search_form(); ?>
 	</div>
@@ -24,8 +24,8 @@
 	<div id="books">
 		<?php
 			// Create custom query
-			$query_books = new WP_Query( array( 'showposts' => 30, 'post_type' => 'livros', 'paged' => $paged ) );
-			
+			$query_books = new WP_Query( array( 'showposts' => 32, 'post_type' => 'livros', 'paged' => $paged ) );
+
 			// Looop
 			while ( $query_books->have_posts() ) : $query_books->the_post();
 
